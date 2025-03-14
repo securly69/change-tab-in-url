@@ -34,8 +34,8 @@
     <script>
         function changeURL() {
             if (window.history.pushState) {
-                window.history.pushState({}, "Fake Page", "/taburl/fake-page"); // ✅ Allowed within your site
-                console.log("URL changed to: " + window.location.href);
+                window.history.pushState("/taburl/fake-page"); // ✅ Allowed within your site
+                alert("URL changed to: " + window.location.href);
             } else {
                 console.error("pushState not supported.");
             }
